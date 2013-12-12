@@ -1,0 +1,131 @@
+// REPEAT VARIABLES & MIXINS
+// ----------------------------------------------------------------------------
+// Required since we compile the responsive stuff separately
+
+@import "variables"
+
+// Modify this for custom colors, font-sizes, etc
+@import "mixins"
+
+.clearfix
+	*zoom: 1
+	&:before
+		display: table
+		line-height: 0
+		content: ""
+	&:after
+		display: table
+		line-height: 0
+		content: ""
+		clear: both
+
+.hide-text
+	font: 0 / 0 a
+	color: transparent
+	text-shadow: none
+	background-color: transparent
+	border: 0
+
+.input-block-level
+	display: block
+	width: 100%
+	min-height: 30px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+.hidden
+	display: none
+	visibility: hidden
+
+.visible-phone, .visible-tablet, .hidden-desktop
+	display: none !important
+
+.visible-desktop
+	display: inherit !important
+
+@media (min-width: 768px) and (max-width: 979px)
+	.hidden-desktop
+		display: inherit !important
+	.visible-desktop
+		display: none !important
+	.visible-tablet
+		display: inherit !important
+	.hidden-tablet
+		display: none !important
+	.hidden-tablet-landscape
+		display: none !important
+
+@media (max-width: 767px)
+	.hidden-desktop
+		display: inherit !important
+	.visible-desktop
+		display: none !important
+	.visible-phone
+		display: inherit !important
+	.hidden-phone
+		display: none !important
+
+			
+
+@media (min-width: 1200px)
+
+@media (min-width: 768px) and (max-width: 979px)
+	
+			
+					
+@media (max-width: 767px)
+	h1, h2, h3, h4, h5, h6
+		margin-bottom: 10px
+	h2
+		font-size: 22px
+	h3
+		padding: 0
+		&:after
+			width: 100%			
+	.region-content .container
+		padding: 0 44px
+	.container-fluid
+		padding: 0
+	.dl-horizontal
+		dt
+			float: none
+			width: auto
+			clear: none
+			text-align: left
+		dd
+			margin-left: 0
+	.logo
+		position: absolute !important
+	#intro
+		text-align: center
+	#open-table
+		float: none !important
+		margin: 0 auto 50px !important
+		width: 168px
+	.other
+		float: none !important
+		width: 100% !important
+		text-align: center
+		.btn
+			margin-bottom: 50px
+	
+
+@media (max-width: 480px)
+	input
+		&[type="checkbox"], &[type="radio"]
+			border: 1px solid #ccc
+	.form-horizontal
+		.control-label
+			float: none
+			width: auto
+			padding-top: 0
+			text-align: left
+		.controls
+			margin-left: 0
+		.control-list
+			padding-top: 0
+		.form-actions
+			padding-right: 10px
+			padding-left: 10px
+

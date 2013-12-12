@@ -1,0 +1,592 @@
+//    _   _   _   _     //
+//   / \ / \ / \ / \    //
+//  ( B | A | S | E )   //
+//   \_/ \_/ \_/ \_/    //
+
+// ..............................................
+//
+//  Global Resets and Standards
+//
+// ..............................................
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	margin: 0
+	padding: 0
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section
+	display: block
+
+*, *:before, *:after
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+
+figure
+	margin: 0
+
+html
+	height: 100%
+	width: 100%
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+
+body
+	margin: 0
+	font-family: "europa", sans-serif
+	font-size: 28px
+	font-weight: 400
+	line-height: 1.4
+	color: black
+	background-color: #f6f6f6
+	text-rendering: optimizeLegibility
+
+// Drupal Override
+.element-invisible
+	display: none
+
+// ..............................................
+//
+//  Links
+//
+// ..............................................
+a
+	color: $black
+	text-decoration: none
+	padding: 2px
+	border-bottom: 2px solid
+	&:hover
+		color: inherit
+		text-decoration: none
+		border-bottom: 2px solid
+	&:focus
+		outline: none
+	img
+		border: none
+
+
+// ..............................................
+//
+//  Structure
+//
+// ..............................................
+
+::selection
+
+
+::-moz-selection
+
+
+.center
+	margin: 0 auto
+
+.left
+	float: left
+
+.right
+	float: right
+
+.text-left
+	text-align: left
+
+.text-right
+	text-align: right
+
+.text-center
+	text-align: center
+
+.hidden
+	display: none
+
+.visible
+	display: block
+
+.highlight
+	background: #ffff99
+
+.spacer
+	height: 50px
+	width: 100%
+	clear: both
+
+img
+	width: auto
+	height: auto
+	max-width: 100%
+	vertical-align: middle
+	border: 0
+	-ms-interpolation-mode: bicubic
+
+#map_canvas 
+	img, object, embed
+
+#googlemap img, object, embed
+	
+
+button, input, select, textarea
+	margin: 0
+
+button, input
+	*overflow: visible
+	line-height: normal
+
+button::-moz-focus-inner, input::-moz-focus-inner
+	padding: 0
+	border: 0
+
+button
+	cursor: pointer
+	-webkit-appearance: button
+
+input
+	&[type="button"], &[type="reset"], &[type="submit"]
+		cursor: pointer
+		-webkit-appearance: button
+	&[type="search"]
+		-webkit-box-sizing: content-box
+		-moz-box-sizing: content-box
+		box-sizing: content-box
+		-webkit-appearance: textfield
+		&::-webkit-search-decoration, &::-webkit-search-cancel-button
+			-webkit-appearance: none
+
+textarea
+	overflow: auto
+	vertical-align: top
+
+.clearfix
+	*zoom: 1
+	&:before
+		display: table
+		line-height: 0
+		content: ""
+	&:after
+		display: table
+		line-height: 0
+		content: ""
+		clear: both
+
+// ..............................................
+//
+//  Typeography
+//
+// ..............................................
+
+p
+	margin: 0 0 20px
+
+.lead
+	margin-bottom: 20px
+	font-size: 21px
+	font-weight: 200
+	line-height: 30px
+
+small
+	font-size: 85%
+
+strong
+	font-weight: bold
+
+em
+	font-style: italic
+
+cite
+	font-style: normal
+
+.muted
+	color: $grayLight
+
+.text-warning
+	color: $red
+
+.text-error
+	color: $red
+
+.text-info
+	color: $gray
+
+.text-success
+	color: $green
+
+h1, h2, h3
+	margin: 0 0 10px 0
+	font-family: "brandon-grotesque", sans-serif
+	font-weight: 700
+	line-height: 1.5
+	text-rendering: optimizelegibility
+
+h1
+	font-size: 60px
+
+h2
+	font-size: 35px
+
+h3
+	font-size: 18px
+
+ul, ol
+	padding: 0
+	margin: 0 0 10px 25px
+
+ul
+	ul, ol
+		margin-bottom: 0
+
+ol
+	ol, ul
+		margin-bottom: 0
+
+li
+	line-height: 20px
+
+ul.unstyled, ol.unstyled
+	margin-left: 0
+	list-style: none
+
+dl
+	margin-bottom: 20px
+
+dt, dd
+	line-height: 20px
+
+dt
+	font-weight: bold
+
+dd
+	margin-left: 10px
+
+.dl-horizontal
+	*zoom: 1
+	&:before
+		display: table
+		line-height: 0
+		content: ""
+	&:after
+		display: table
+		line-height: 0
+		content: ""
+		clear: both
+	dt
+		float: left
+		width: 160px
+		overflow: hidden
+		clear: left
+		text-align: right
+		text-overflow: ellipsis
+		white-space: nowrap
+	dd
+		margin-left: 180px
+
+hr
+	margin: 50px 0
+	border: 0
+	border-top: 1px solid $grayDark
+	clear: both
+
+abbr
+	&[title]
+		cursor: help
+		border-bottom: 1px dotted $grayLight
+
+blockquote
+	padding: 0 0 0 15px
+	margin: 0 0 20px
+	border-left: 5px solid $gray
+	p
+		margin-bottom: 0
+		font-size: 16px
+		font-weight: 300
+		line-height: 25px
+
+q
+	&:before, &:after
+		content: ""
+
+blockquote
+	&:before, &:after
+		content: ""
+
+address
+	display: block
+	margin-bottom: 20px
+	font-style: normal
+	line-height: 20px
+
+code, pre
+	padding: 0 3px 2px
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace
+	font-size: 12px
+	color: #333333
+	border-radius: 3px
+
+
+code
+	padding: 2px 4px
+	color: #d14
+	background-color: #f7f7f9
+	border: 1px solid #e1e1e8
+
+pre
+	display: block
+	padding: 9.5px
+	margin: 0 0 10px
+	font-size: 13px
+	line-height: 20px
+	word-break: break-all
+	word-wrap: break-word
+	white-space: pre
+	white-space: pre-wrap
+	background-color: #f5f5f5
+	border: 1px solid #ccc
+	border: 1px solid rgba(0, 0, 0, 0.15)
+	-webkit-border-radius: 4px
+	-moz-border-radius: 4px
+	border-radius: 4px
+	&.prettyprint
+		margin-bottom: 20px
+	code
+		padding: 0
+		color: inherit
+		background-color: transparent
+		border: 0
+
+.pre-scrollable
+	max-height: 340px
+	overflow-y: scroll
+
+.bordered
+	min-height: 20px
+	padding: 3em
+	margin-bottom: 20px
+	border: 4px solid $borderColor
+
+.fade
+	opacity: 0
+	-webkit-transition: opacity 0.15s linear
+	-moz-transition: opacity 0.15s linear
+	-o-transition: opacity 0.15s linear
+	transition: opacity 0.15s linear
+	&.in
+		opacity: 1
+
+// ..............................................
+//
+//  Navigation
+//
+// ..............................................
+
+.header
+	position: fixed
+	top: 0
+	width: 100%
+	height: 50px
+	color: $black
+	z-index: 700
+
+
+// ..............................................
+//
+//  Buttons
+//
+// ..............................................
+
+.btn
+	display: inline-block
+	padding: 20px 40px
+	color: $white
+	border: none
+	white-space: nowrap
+	text-align: center
+	cursor: pointer
+	background-color: $black
+	line-height: 14px
+	+transition()
+	-moz-user-select: -moz-none
+	-webkit-user-select: none
+	-ms-user-select: none
+	-o-user-select: none
+	user-select: none
+	&:hover
+		background-color: $primaryColor
+		color: #fcfcfc
+		text-decoration: none
+	&.active, &:active
+		outline: 0
+	&:visited
+		color: white
+	&:focus
+		outline: none
+	&.disabled, &[disabled]
+		background: $gray
+		color: white
+		&:hover
+			background: $gray
+	&.rounded
+		border-radius: 50px
+	&.primo
+		background: $primaryColor
+		&:hover
+			opacity: 0.8
+	&.btn-hollow
+		border: 2px solid $black
+		color: $black
+		background: none
+		&:hover
+			color: $primaryColor
+			border: 2px solid $primaryColor
+			text-decoration: none
+		&.active, &:active
+			outline: 0
+		&.disabled, &[disabled]
+			opacity: 0.4
+			&:hover
+				border: 4px solid #111
+	.icon
+		position: relative
+		line-height: 0
+		top: 2px
+		font-size: 2em
+		margin-right: 3px
+	&.btn-small
+		padding: 10px
+		font-size: 12px
+		max-width: 20em
+		[class^="icon-"]
+			margin-top: 0
+	&.full
+		width: 100%
+	&.rounded
+		border-radius: 50px
+
+button.btn
+	*padding-top: 3px
+	*padding-bottom: 3px
+
+
+.pagination
+	margin-bottom: 20px
+	text-align: center
+	ul
+		display: inline-block
+		margin-bottom: 0
+		margin-left: 0
+		-webkit-border-radius: 4px
+		-moz-border-radius: 4px
+		border-radius: 4px
+		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+		-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+		> li
+			display: inline
+			&:first-child a
+				border-left-width: 1px
+			a
+				float: left
+				padding: 6px 15px
+				line-height: 20px
+				text-decoration: none
+				background-color: #FFF
+				border: 1px solid $borders
+				border-left-width: 0
+				&.active
+					background: $grayDark
+
+// ..............................................
+//
+//  Alerts
+//
+// ..............................................
+
+.alert
+	position: fixed
+	z-index: 1000
+	top: 60px
+	left: 50%
+	width: 600px
+	margin-left: -300px
+	padding: 8px 35px 8px 14px
+	margin-bottom: 20px
+	color: $red
+	background-color: white
+	border: 1px solid $red
+	border-radius: 10px
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1)
+	h4
+		margin: 0
+	.close
+		position: relative
+		top: 2px
+		right: 3px
+		line-height: 1
+		border: 1px solid white
+		background: white
+		font-weight: bold
+		font-size: 18px
+		color: $black
+		vertical-align: baseline
+		&:focus
+			outline: none
+
+		
+.alert-success
+	color: $green
+	background-color: white
+	border-color: $green
+
+
+// ..............................................
+//
+//  Labels and Badges
+//
+// ..............................................
+
+.label, .badge
+	font-size: 11.844px
+	font-weight: bold
+	line-height: 14px
+	color: white
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+	white-space: nowrap
+	vertical-align: baseline
+	background-color: $grayDark
+
+.label
+	padding: 1px 4px 2px
+	border-radius: 3px
+
+.badge
+	padding: 1px 9px 2px
+	border-radius: 9px
+
+a
+	&.label:hover, &.badge:hover
+		color: #ffffff
+		text-decoration: none
+		cursor: pointer
+
+.label-important, .badge-important
+	background-color: $red
+
+.label-important[href], .badge-important[href]
+	background-color: #953b39
+
+.label-success, .badge-success
+	background-color: $green
+
+.label-success[href], .badge-success[href]
+	background-color: #356635
+
+.btn
+	.label, .badge
+		position: relative
+		top: -1px
+
+.btn-mini
+	.label, .badge
+		top: 0
+
+

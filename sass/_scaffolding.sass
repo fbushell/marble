@@ -1,0 +1,43 @@
+// ..............................................
+//
+//  Scaffolding
+//
+// ..............................................
+
+.wrap
+	overflow: hidden
+
+.container 
+	width: 90%
+	max-width: 1200px
+	margin: 0 auto
+
+.container-full
+	width: 100%
+
+.half
+	float: left
+	width: 50%
+.third
+	float: left
+	width: 33.3%
+.quarter
+	float: left
+	width: 25%
+
+.container,
+.container-full
+	.row
+		overflow: hidden
+		margin-left: -30px
+		.half,
+		.third,
+		.quarter,
+			.inner
+				margin-left: 30px
+
+.half,
+.third,
+.quarter
+	.inner
+		margin: 20px
